@@ -8,9 +8,16 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the
-    <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide [ngStyle]="{'background-image': 'url(assets/images/hyundai_commonwealth_102518.jpg)'}">
+      <ion-button class="activated">INQUIRE NOW</ion-button>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
