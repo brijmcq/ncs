@@ -1,0 +1,8 @@
+{
+  "name": "ncs",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "pro_id": "baf6c84a"
+}
