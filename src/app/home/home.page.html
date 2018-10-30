@@ -1,23 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      <img class="app-logo" src="assets/images/carmudi-logo-PH.svg" />
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content padding>
+<ion-content>
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide [ngStyle]="{'background-image': 'url(assets/images/hyundai_commonwealth_102518.jpg)'}">
       <ion-button class="activated">INQUIRE NOW</ion-button>
     </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 3</h1>
+    <ion-slide [ngStyle]="{'background-image': 'url(assets/images/couple_cars.jpg)'}">
+      <ion-button class="activated">READ MORE</ion-button>
     </ion-slide>
   </ion-slides>
+  <ion-row padding>
+    <h1>Find the best deal for you</h1>
+    <p>From low downpayment to cash discounts and freebies, we've got the latest and greatest deals on your favorite
+      vehicle</p>
+  </ion-row>
 </ion-content>
