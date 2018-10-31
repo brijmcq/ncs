@@ -1,7 +1,43 @@
 ion-slide {
   background-repeat: round;
-  height: 60vh;
+  height: 38vh;
 }
 .app-logo {
   height: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #006fc1;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+.best-deals-images {
+  height: 160px;
+  width: 300px;
+  margin: auto;
+}
+.slide-btn {
+  position: absolute;
+}
+ion-slide {
+  background: lightgrey;
+  img {
+    width: 100%;
+  }
+  .slider-description {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    top: 30%;
+  }
+
+  .has-description {
+    bottom: 30px;
+  }
+  .darken-bg {
+    filter: brightness(0.7);
+  }
 }

@@ -9,17 +9,25 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide [ngStyle]="{'background-image': 'url(assets/images/hyundai_commonwealth_102518.jpg)'}">
-      <ion-button class="activated">INQUIRE NOW</ion-button>
+  <ion-slides (ionSlideNextStart)="goToFirstSlide()" pager="true"
+    [options]="slideOpts">
+    <!-- <ion-slide [ngStyle]="{'background-image': 'url(assets/images/hyundai_commonwealth_102518.jpg)'}"> -->
+    <ion-slide *ngFor="let slider of mainSlider">
+      <img [class.darken-bg]="slider?.description" [src]="slider.imgUrl" />
+      <h1 class="slider-description" *ngIf="slider?.description">{{slider.description}}</h1>
+      <ion-button [class.has-description]='slider?.description'
+        class="activated slide-btn">{{slider.text}}</ion-button>
     </ion-slide>
-    <ion-slide [ngStyle]="{'background-image': 'url(assets/images/couple_cars.jpg)'}">
-      <ion-button class="activated">READ MORE</ion-button>
-    </ion-slide>
+
   </ion-slides>
   <ion-row padding>
     <h1>Find the best deal for you</h1>
-    <p>From low downpayment to cash discounts and freebies, we've got the latest and greatest deals on your favorite
+    <p>From low downpayment to cash discounts and freebies, we've got the latest
+      and greatest deals on your favorite
       vehicle</p>
+  </ion-row>
+  <ion-row padding *ngFor="let deal of deals">
+    <img class="best-deals-images" [src]="deal.imgUrl" />
+    <p>{{deal.text}}</p>
   </ion-row>
 </ion-content>
